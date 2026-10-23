@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ian Bourgez · Desarrollador Web</title>
+<meta name="description" content="Portafolio de Ian Bourgez, desarrollador web de Olavarría, Buenos Aires.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0d12; --panel:#12161e; --line:#222a36; --text:#e8ecf2; --muted:#93a0b4;
+    --accent:#3ddc97; --accent2:#4cc9f0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+  nav{position:sticky;top:0;z-index:10;background:rgba(11,13,18,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+  .logo{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-weight:700;font-size:1.2rem}
+  .logo span{color:var(--accent)}
+  nav ul{display:flex;gap:24px;list-style:none;font-size:.95rem;color:var(--muted)}
+  nav ul a:hover{color:var(--text)}
+
+  .hero{padding-top:110px;padding-bottom:90px}
+  .tag{display:inline-block;font-size:.85rem;color:var(--accent);border:1px solid rgba(61,220,151,.35);padding:4px 12px;border-radius:999px;margin-bottom:22px}
+  h1{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.05;letter-spacing:-.02em}
+  h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{max-width:620px;color:var(--muted);font-size:1.1rem;margin:22px 0 34px}
+  .btns{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;font-weight:600;font-size:.95rem;transition:.2s}
+  .btn-main{background:var(--accent);color:#06140d}
+  .btn-main:hover{filter:brightness(1.1);transform:translateY(-2px)}
+  .btn-ghost{border:1px solid var(--line);background:var(--panel)}
+  .btn-ghost:hover{border-color:var(--muted)}
+  .btn svg{width:18px;height:18px}
+
+  .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:50px}
+  .skills span{background:var(--panel);border:1px solid var(--line);padding:6px 14px;border-radius:8px;font-size:.88rem;color:var(--muted)}
+
+  section{padding:80px 0}
+  h2{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:2rem;margin-bottom:8px}
+  .sub{color:var(--muted);margin-bottom:40px}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+  .card:hover{transform:translateY(-4px);border-color:#334055}
+  .card img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid var(--line);display:block}
+  .card-body{padding:22px;display:flex;flex-direction:column;flex:1}
+  .card h3{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.3rem;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:.95rem;flex:1}
+  .stack{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0}
+  .stack span{font-size:.75rem;font-weight:600;color:var(--accent2);background:rgba(76,201,240,.1);padding:3px 9px;border-radius:6px}
+  .links{display:flex;gap:16px;font-size:.9rem;font-weight:600}
+  .links a{color:var(--accent)}
+  .links a:hover{text-decoration:underline}
+  .links .off{color:var(--muted);font-weight:500}
+
+  .contact{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:50px;text-align:center}
+  .contact p{color:var(--muted);margin:10px 0 30px}
+  .contact .btns{justify-content:center}
+
+  footer{text-align:center;color:var(--muted);font-size:.85rem;padding:40px 0;border-top:1px solid var(--line)}
+
+  @media(max-width:760px){
+    nav ul{display:none}
+    .grid{grid-template-columns:1fr}
+    .hero{padding-top:70px;padding-bottom:60px}
+    .contact{padding:34px 20px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">Ian<span>.</span>dev</a>
+    <ul>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <span class="tag">📍 Olavarría, Buenos Aires</span>
+  <h1>Hola, soy Ian Bourgez.<br><em>Desarrollo web y apps.</em></h1>
+  <p>Estudiante de la Tecnicatura en Informática. Armo páginas y aplicaciones web, desde juegos en JavaScript hasta plataformas con backend y base de datos. También tengo mi propio servicio técnico informático.</p>
+  <div class="btns">
+    <a href="#proyectos" class="btn btn-main">Ver proyectos</a>
+    <a data-github href="#" target="_blank" class="btn btn-ghost">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+      GitHub
+    </a>
+  </div>
+  <div class="skills">
+    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>PHP</span><span>SQLite</span><span>Python</span><span>Git</span>
+  </div>
+</header>
+
+<section id="proyectos">
+  <div class="wrap">
+    <h2>Proyectos</h2>
+    <p class="sub">Algunas cosas que construí.</p>
+    <div class="grid">
+
+      <article class="card">
+        <img src="img/lissandro.webp" alt="Captura del juego Lissandro" loading="lazy">
+        <div class="card-body">
+          <h3>Lissandro Aquirre de Jojoslovania</h3>
+          <p>RPG en el navegador: una odisea absurda por una hogaza de pan. Tiene mapa explorable, NPCs con diálogos, combate por turnos, jefes, inventario, guardado de partida, audio y varios finales.</p>
+          <div class="stack"><span>JavaScript</span><span>Canvas</span><span>CSS</span></div>
+          <div class="links"><a data-demo="Lissandro" href="#" target="_blank">▶ Jugar</a><a data-code="Lissandro" href="#" target="_blank">Código</a></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/pccreator.webp" alt="Captura de PC Nexus" loading="lazy">
+        <div class="card-body">
+          <h3>PC Nexus</h3>
+          <p>Plataforma para armar, comparar y evaluar PCs. Configurador de 19 componentes con motor de compatibilidad real (socket, RAM, consumo), comparador de precios, simulador de FPS, login de usuarios y tests.</p>
+          <div class="stack"><span>PHP</span><span>SQLite</span><span>JavaScript</span><span>API REST</span></div>
+          <div class="links"><a data-code="pc-nexus" href="#" target="_blank">Código</a><span class="off">Demo local (PHP)</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/armatupc.webp" alt="Captura de ArmaTuPC" loading="lazy">
+        <div class="card-body">
+          <h3>ArmaTuPC</h3>
+          <p>Armador de PC que pregunta tu zona, revisa compatibilidad y busca precios en vivo en Mercado Libre, tiendas locales y Amazon (con dólar tarjeta). Al terminar estima el rendimiento en juegos.</p>
+          <div class="stack"><span>Node.js</span><span>JavaScript</span><span>Web scraping</span></div>
+          <div class="links"><a data-code="armatupc" href="#" target="_blank">Código</a></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/ecoinsumos.webp" alt="Captura de Eco-Insumos" loading="lazy">
+        <div class="card-body">
+          <h3>Eco-Insumos</h3>
+          <p>Sitio para un proyecto de innovación: reutilizar plásticos para fabricar insumos médicos, férulas y modelos anatómicos, con inclusión laboral a través de una cooperativa.</p>
+          <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <div class="links"><a href="https://ecoinsumos.github.io" target="_blank">Ver sitio</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="contact">
+      <h2>¿Hablamos?</h2>
+      <p>Estoy abierto a proyectos, prácticas y trabajos. Escribime cuando quieras.</p>
+      <div class="btns">
+        <a data-whatsapp href="#" target="_blank" class="btn btn-main">💬 WhatsApp</a>
+        <a data-tel href="#" class="btn btn-ghost">📞 <span data-tel-text></span></a>
+        <a data-github href="#" target="_blank" class="btn btn-ghost">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="y"></span> Ian Bourgez · Olavarría, Argentina</footer>
+
+<script>
+  // ====== EDITÁ SOLO ESTAS DOS LÍNEAS ======
+  const GITHUB_USER = "IanBourgez";
+  const TELEFONO    = "+54 9 2284 712671";
+  // =========================================
+
+  const gh = "https://github.com/" + GITHUB_USER;
+  const num = TELEFONO.replace(/\D/g, "");
+  document.querySelectorAll("[data-github]").forEach(a => a.href = gh);
+  document.querySelectorAll("[data-code]").forEach(a => a.href = gh + "/" + a.dataset.code);
+  document.querySelectorAll("[data-demo]").forEach(a => a.href = "https://" + GITHUB_USER + ".github.io/" + a.dataset.demo + "/");
+  document.querySelectorAll("[data-whatsapp]").forEach(a => a.href = "https://wa.me/" + num);
+  document.querySelectorAll("[data-tel]").forEach(a => a.href = "tel:+" + num);
+  document.querySelectorAll("[data-tel-text]").forEach(s => s.textContent = TELEFONO);
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

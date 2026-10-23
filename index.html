@@ -65,9 +65,47 @@
 
   footer{text-align:center;color:var(--muted);font-size:.85rem;padding:40px 0;border-top:1px solid var(--line)}
 
+  .skills .ai{color:#c9a6ff;border-color:rgba(167,123,255,.4);background:rgba(167,123,255,.08)}
+
+  /* RIFTWAKE destacado */
+  .feature{background:var(--panel);border:1px solid #3a2a55;border-radius:20px;overflow:hidden;margin-bottom:26px;box-shadow:0 0 60px rgba(140,70,255,.08)}
+  .feature-cover{position:relative;aspect-ratio:16/7;background:url(img/riftwake/portada.webp) center/cover}
+  .feature-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--panel) 2%,rgba(18,22,30,.2) 55%,transparent)}
+  .feature-cover .badge{position:absolute;top:18px;left:18px;z-index:1;background:rgba(220,40,60,.9);color:#fff;font-size:.78rem;font-weight:700;padding:5px 12px;border-radius:999px;letter-spacing:.04em}
+  .feature-body{padding:0 30px 30px;margin-top:-50px;position:relative;z-index:1}
+  .feature h3{font-family:"Space Grotesk",Inter,sans-serif;font-size:2rem;line-height:1.1}
+  .feature h3 small{display:block;font-size:1rem;color:#c9a6ff;font-weight:500;margin-top:4px}
+  .feature p.lead{color:var(--muted);max-width:760px;margin:14px 0 4px}
+  .gal-title{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:26px 0 10px;font-weight:600}
+  .classes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .classes figure{border-radius:12px;overflow:hidden;border:1px solid var(--line);position:relative}
+  .classes img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+  .classes figcaption{position:absolute;bottom:0;left:0;right:0;padding:24px 12px 10px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent);font-weight:600;font-size:.9rem}
+  .icons{display:flex;flex-wrap:wrap;gap:10px}
+  .icons img{width:76px;height:76px;border-radius:10px;border:1px solid var(--line);object-fit:cover}
+  .progress{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 24px;list-style:none;font-size:.92rem}
+  .progress li{color:var(--muted)}
+  .progress li b{color:var(--text);font-weight:600}
+  .bar{height:8px;background:#1d2430;border-radius:99px;overflow:hidden;margin:6px 0 2px}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,#7b3dff,#ff3d6e)}
+
+  .card.noimg .head{aspect-ratio:auto;padding:26px 22px 0;font-size:2.4rem}
+
+  /* Experiencia */
+  .cols{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .box h3{font-family:"Space Grotesk",Inter,sans-serif;font-size:1.15rem;margin-bottom:16px}
+  .item{padding:12px 0;border-top:1px solid var(--line)}
+  .item:first-of-type{border-top:0;padding-top:0}
+  .item b{display:block}
+  .item span{color:var(--muted);font-size:.9rem}
+
   @media(max-width:760px){
     nav ul{display:none}
-    .grid{grid-template-columns:1fr}
+    .grid,.cols,.progress{grid-template-columns:1fr}
+    .feature-cover{aspect-ratio:16/10}
+    .feature-body{padding:0 18px 22px}
+    .icons img{width:60px;height:60px}
     .hero{padding-top:70px;padding-bottom:60px}
     .contact{padding:34px 20px}
   }
@@ -80,6 +118,7 @@
     <a href="#" class="logo">Ian<span>.</span>dev</a>
     <ul>
       <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </div>
@@ -88,7 +127,7 @@
 <header class="hero wrap">
   <span class="tag">📍 Olavarría, Buenos Aires</span>
   <h1>Hola, soy Ian Bourgez.<br><em>Desarrollo web y apps.</em></h1>
-  <p>Estudiante de la Tecnicatura en Informática. Armo páginas y aplicaciones web, desde juegos en JavaScript hasta plataformas con backend y base de datos. También tengo mi propio servicio técnico informático.</p>
+  <p>Estudiante de Técnico en Informática con orientación en programación y aplicaciones. Desarrollo proyectos web, videojuegos y robótica, uso herramientas de inteligencia artificial para trabajar más rápido y tengo mi propio servicio técnico informático.</p>
   <div class="btns">
     <a href="#proyectos" class="btn btn-main">Ver proyectos</a>
     <a data-github href="#" target="_blank" class="btn btn-ghost">
@@ -97,7 +136,7 @@
     </a>
   </div>
   <div class="skills">
-    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>PHP</span><span>SQLite</span><span>Python</span><span>Git</span>
+    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>PHP</span><span>SQLite</span><span>Python</span><span>Luau (Roblox)</span><span>Arduino</span><span>Git</span><span>Blender</span><span class="ai">✦ IA: Claude, Gemini, prompts</span>
   </div>
 </header>
 
@@ -105,6 +144,44 @@
   <div class="wrap">
     <h2>Proyectos</h2>
     <p class="sub">Algunas cosas que construí.</p>
+
+    <article class="feature">
+      <div class="feature-cover"><span class="badge">● EN DESARROLLO</span></div>
+      <div class="feature-body">
+        <h3>RIFTWAKE<small>Echoes of the Rift · RPG de acción anime en Roblox</small></h3>
+        <p class="lead">Mundo abierto medieval con 9 regiones, 7 clases con armas propias (espada, dagas, bastón, hachas, arco, guadaña y puños), 19 razas, árbol de 74 habilidades, misiones, jefes de mundo con botín y guardado de progreso. Programo los sistemas en Luau con Rojo, modelo assets en Blender y uso IA para acelerar el desarrollo y crear el arte.</p>
+        <div class="stack"><span>Luau</span><span>Roblox Studio</span><span>Rojo</span><span>Blender</span><span>IA (Claude + MCP)</span></div>
+
+        <div class="gal-title">Clases</div>
+        <div class="classes">
+          <figure><img src="img/riftwake/clase_gladiator.webp" alt="Clase Gladiator" loading="lazy"><figcaption>Gladiator · espada</figcaption></figure>
+          <figure><img src="img/riftwake/clase_assassin.webp" alt="Clase Assassin" loading="lazy"><figcaption>Assassin · dagas</figcaption></figure>
+          <figure><img src="img/riftwake/clase_arcane.webp" alt="Clase Arcane" loading="lazy"><figcaption>Arcane · bastón</figcaption></figure>
+        </div>
+
+        <div class="gal-title">Armas y habilidades</div>
+        <div class="icons">
+          <img src="img/riftwake/arma_riftblade.webp" alt="Riftblade" title="Riftblade" loading="lazy">
+          <img src="img/riftwake/arma_dawnbreaker.webp" alt="Dawnbreaker" title="Dawnbreaker" loading="lazy">
+          <img src="img/riftwake/arma_frostfangdaggers.webp" alt="Frostfang Daggers" title="Frostfang Daggers" loading="lazy">
+          <img src="img/riftwake/arma_thunderstaff.webp" alt="Thunder Staff" title="Thunder Staff" loading="lazy">
+          <img src="img/riftwake/arma_knightblade.webp" alt="Knight Blade" title="Knight Blade" loading="lazy">
+          <img src="img/riftwake/hab_firefist.webp" alt="Fire Fist" title="Fire Fist" loading="lazy">
+          <img src="img/riftwake/hab_whirlwind.webp" alt="Whirlwind" title="Whirlwind" loading="lazy">
+          <img src="img/riftwake/hab_shadowstrike.webp" alt="Shadow Strike" title="Shadow Strike" loading="lazy">
+          <img src="img/riftwake/hab_arcanenova.webp" alt="Arcane Nova" title="Arcane Nova" loading="lazy">
+        </div>
+
+        <div class="gal-title">Avance</div>
+        <ul class="progress">
+          <li><b>Base del juego</b> · mapa, combate, misiones, guardado<div class="bar"><i style="width:90%"></i></div></li>
+          <li><b>Update 0.9 "Vida y sonido"</b> · música, tutorial, celular<div class="bar"><i style="width:30%"></i></div></li>
+          <li><b>Update 1.0 "The Sunken Crypt"</b> · jefe Hollow Warden listo<div class="bar"><i style="width:20%"></i></div></li>
+          <li><b>Próximo</b> · clases, party, PvP y el Mundo Digital<div class="bar"><i style="width:5%"></i></div></li>
+        </ul>
+      </div>
+    </article>
+
     <div class="grid">
 
       <article class="card">
@@ -123,7 +200,7 @@
           <h3>PC Nexus</h3>
           <p>Plataforma para armar, comparar y evaluar PCs. Configurador de 19 componentes con motor de compatibilidad real (socket, RAM, consumo), comparador de precios, simulador de FPS, login de usuarios y tests.</p>
           <div class="stack"><span>PHP</span><span>SQLite</span><span>JavaScript</span><span>API REST</span></div>
-          <div class="links"><a data-code="pc-nexus" href="#" target="_blank">Código</a><span class="off">Demo local (PHP)</span></div>
+          <div class="links"><a data-code="PC-creator" href="#" target="_blank">Código</a><span class="off">Demo local (PHP)</span></div>
         </div>
       </article>
 
@@ -147,6 +224,48 @@
         </div>
       </article>
 
+      <article class="card noimg">
+        <div class="head">🎙️</div>
+        <div class="card-body">
+          <h3>AVEN · Asistente personal</h3>
+          <p>Mi propio asistente por voz, estilo "Ok Google", con nombre y app propios. La PC de escritorio funciona como servidor y la laptop y el celular Android se conectan para controlarla.</p>
+          <div class="stack"><span>Python</span><span>IA</span><span>Android</span><span>Redes</span></div>
+          <div class="links"><span class="off">En desarrollo</span></div>
+        </div>
+      </article>
+
+      <article class="card noimg">
+        <div class="head">🤖</div>
+        <div class="card-body">
+          <h3>Robots de sumo y de carrera</h3>
+          <p>Diseño, armado y programación de robots para competencias de sumo y de velocidad, con sensores y motores controlados por Arduino.</p>
+          <div class="stack"><span>Arduino</span><span>C++</span><span>Electrónica</span></div>
+          <div class="links"><span class="off">2025</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="experiencia">
+  <div class="wrap">
+    <h2>Experiencia y formación</h2>
+    <p class="sub">Trabajo real con clientes y lo que sigo aprendiendo.</p>
+    <div class="cols">
+      <div class="box">
+        <h3>💼 Experiencia</h3>
+        <div class="item"><b>Técnico informático · Aven (emprendimiento propio)</b><span>2025 – actualidad · Diagnóstico y reparación de PC y notebooks, mantenimiento de consolas y celulares. Gestiono el servicio completo: presupuesto, reparación, entrega y atención al cliente.</span></div>
+        <div class="item"><b>Ayudante de cocina y atención al cliente · Pizza Party</b><span>2025 – 2026 · Atención al público, gestión de pedidos y control de calidad.</span></div>
+      </div>
+      <div class="box">
+        <h3>🎓 Formación</h3>
+        <div class="item"><b>Técnico en Informática · EEST N°2 "Luciano Fortabat"</b><span>En curso</span></div>
+        <div class="item"><b>Manejo de IA · Diseño Web</b><span>EEST N°2 · 2026</span></div>
+        <div class="item"><b>Robótica con Arduino</b><span>EEST N°2 · 2025 – 2026</span></div>
+        <div class="item"><b>24 hs de Innovación</b><span>FIO UNICEN, Fundación Loma Negra y Municipalidad de Olavarría · 2026</span></div>
+        <div class="item"><b>Programa Puente</b><span>Municipalidad de Olavarría · 2026</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -158,6 +277,7 @@
       <p>Estoy abierto a proyectos, prácticas y trabajos. Escribime cuando quieras.</p>
       <div class="btns">
         <a data-whatsapp href="#" target="_blank" class="btn btn-main">💬 WhatsApp</a>
+        <a href="mailto:ianbourgezx@gmail.com" class="btn btn-ghost">✉️ ianbourgezx@gmail.com</a>
         <a data-tel href="#" class="btn btn-ghost">📞 <span data-tel-text></span></a>
         <a data-github href="#" target="_blank" class="btn btn-ghost">GitHub</a>
       </div>
